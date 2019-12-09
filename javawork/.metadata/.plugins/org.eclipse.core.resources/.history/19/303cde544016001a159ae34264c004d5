@@ -1,0 +1,10 @@
+package chap03;
+//API사용하기 - 참조형 변수 선언
+public class APITest {
+	public static void main(String[] args) {
+		String str = new String();
+//		str = "asddddddddddddddddddddd";
+//		System.out.println(str);
+	}
+
+}
