@@ -1,0 +1,24 @@
+package chap06.oop;
+//클래스를 정의하고 멤버변수를 정의하는 방법
+// - 멤버변수를 정의할때는 특별한 경우를 제외하고 초기값을 주지 않는다.
+// - 초기값을 정의하지 않아도 참조형은 null. 정수형은 0, 실수형 0.0, boolean은 false
+public class PersonTest {
+	public static void main(String[] args) {
+		Person p1 = new Person();
+		p1.name = "장동건";
+		p1.addr = "서울시";
+		p1.age = 45;
+		System.out.println("성명:"+p1.name);
+		System.out.println("주소:"+p1.addr);
+		System.out.println("나이:"+p1.age);
+		
+		Person p2 = new Person();
+		p2.name = "이이이";
+		p2.addr = "나나난";
+		p2.age = 15;
+		System.out.println("성명:"+p2.name);
+		System.out.println("주소:"+p2.addr);
+		System.out.println("나이:"+p2.age);
+	}
+
+}

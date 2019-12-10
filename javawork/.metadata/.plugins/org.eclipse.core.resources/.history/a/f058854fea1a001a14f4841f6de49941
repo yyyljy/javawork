@@ -1,0 +1,12 @@
+package chap06.oop;
+
+public class PersonTest {
+	public static void main(String[] args) {
+		Person[] p = new Person[10];
+		p[0].addr = new String("asdsd");
+		p[1].age = 11;
+		System.out.println(p[0].addr);
+		System.out.println(p[1].age);
+	}
+
+}
