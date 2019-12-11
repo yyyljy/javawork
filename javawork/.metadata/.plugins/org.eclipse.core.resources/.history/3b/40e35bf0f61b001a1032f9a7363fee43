@@ -1,0 +1,18 @@
+package workbook.pg58exam4;
+public class StudentTest {
+
+	public static void main(String[] args) {
+		Student[] student = new Student[3];
+		student[0] = new Student("홍길동",15,171,81);
+		student[1] = new Student("한사람",13,183,72);
+		student[2] = new Student("임걱정",16,175,65);
+		for(int i=0;i<student.length;i++) {
+			if(i==0) {
+				System.out.println("이름\t나이\t신장\t몸무게");
+			}
+			System.out.println(student[i].getName()+"\t"+student[i].getAge()+"\t"+student[i].getHeight()+"\t"+student[i].getWeight());
+		}
+		
+	}
+
+}

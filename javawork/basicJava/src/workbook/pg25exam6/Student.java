@@ -2,10 +2,32 @@ package workbook.pg25exam6;
 
 public class Student {
 	private String name;
+	private int age;
 	private int korean;
 	private int english;
 	private int math;
 	private int science;
+	
+	
+	public Student() {
+	}
+	public Student(String name, int korean, int english, int math, int science) {
+		this.name = name;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.science = science;
+	}
+	public Student(String name, int age, int korean, int english, int math, int science) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.science = science;
+	}
+	
 	
 	public String getName() {
 		return name;
@@ -14,7 +36,12 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public int getKorean() {
 		return korean;
 	}

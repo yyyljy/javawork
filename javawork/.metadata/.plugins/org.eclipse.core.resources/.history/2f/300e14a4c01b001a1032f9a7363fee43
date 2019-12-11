@@ -1,0 +1,8 @@
+package chap06.oop.constructor;
+
+public class MyConstructorTest {
+	public static void main(String[] args) {
+		MyConstructor obj = new MyConstructor();
+		System.out.println(obj.getName()+","+obj.getId()+","+obj.getPass());
+	}
+}

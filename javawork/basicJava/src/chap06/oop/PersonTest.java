@@ -10,7 +10,7 @@ package chap06.oop;
 
 public class PersonTest {
 	public static void main(String[] args) {
-		Person p1 = new Person();
+		/*Person p1 = new Person();
 		p1.setName("장동건");
 		p1.setAddr("서울시");
 		p1.setAge(45); // age변수는 private으로 선언되어 있으므로 
@@ -26,6 +26,9 @@ public class PersonTest {
 		System.out.println("성명:"+p2.getName());
 		System.out.println("주소:"+p2.getAddr());
 		System.out.println("나이:"+p2.getAge());
+		*/
+		Person p3 = new Person("다다다","서서서우울시이이",999);
+		p3.print();
 	}
 
 }

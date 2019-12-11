@@ -5,6 +5,14 @@ public class Account {
 	private int balance;
 	private double interestRate;
 	
+	public Account() {
+	}
+	public Account(String account, int balance, double interestRate) {
+		this.account = account;
+		this.balance = balance;
+		this.interestRate = interestRate;
+	}
+	
 	public void setAccount(String account) {
 		this.account = account;
 	}

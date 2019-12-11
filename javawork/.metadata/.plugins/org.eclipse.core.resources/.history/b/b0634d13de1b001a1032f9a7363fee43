@@ -1,0 +1,13 @@
+package chap07.oop;
+public class StaticDemoTest {
+	public static void main(String[] args) {
+		StaticDemo obj1 = new StaticDemo("obj1");
+		obj1.display();
+		StaticDemo std1 = new StaticDemo("ㄱ가가");
+		std1.display();
+		StaticDemo std2 = new StaticDemo("ㄱ가가");
+		std2.display();
+		
+	}
+
+}
