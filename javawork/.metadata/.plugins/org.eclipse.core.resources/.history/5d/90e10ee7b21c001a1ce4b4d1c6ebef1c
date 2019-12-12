@@ -1,0 +1,34 @@
+package workbook.pg60exam5;
+public class Mobile {
+	private	String mobileName;
+	private int batterySize;
+	private String osType;
+	public Mobile() {
+	}
+	public Mobile(String mobileName, int batterySize, String osType) {
+		super();
+		this.mobileName = mobileName;
+		this.batterySize = batterySize;
+		this.osType = osType;
+	}
+	
+	public int operate(int time) {
+		if(batterySize>=time) {
+			this.batterySize -= time;
+		}
+		else {
+			batterySize = 0;
+		}
+		return batterySize;
+	}
+	public int charge(int time) {
+		if((batterySize+time)<=100) {
+			this.batterySize += time;
+		}else if(batterySize+time>100) {
+			batterySize = 100;
+		}
+		return batterySize;
+	}
+	
+	
+}

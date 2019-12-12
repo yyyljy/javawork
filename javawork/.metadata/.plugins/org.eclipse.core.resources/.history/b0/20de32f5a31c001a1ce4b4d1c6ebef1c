@@ -1,0 +1,25 @@
+package chap07.oop;
+
+public class CheckingAccount extends Account{
+	private String cardNo;
+
+	public CheckingAccount() {
+	}
+	public CheckingAccount(String account, String ownerName, int balance, String cardNo) {
+		super(account, ownerName, balance);
+		this.cardNo = cardNo;
+	}
+	
+	public void pay(String cardNo, int balance) {
+		if(this.cardNo.equals(cardNo)) {
+			if(this.getBalance() >= balance) {
+				this.withdraw(balance);
+			}else {
+				System.out.println("잔고가 부족합니다.");
+			}
+		}
+		else {
+			System.out.println("카드정보가 없습니다.");
+		}
+	}
+}

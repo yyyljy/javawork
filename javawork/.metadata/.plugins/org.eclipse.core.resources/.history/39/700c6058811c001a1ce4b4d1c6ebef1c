@@ -1,0 +1,9 @@
+package chap07.oop;
+public class Teacher {
+	private String name;
+	private int age;
+	private String subject;
+	public Teacher() {
+		
+	}
+}
