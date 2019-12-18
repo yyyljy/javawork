@@ -23,7 +23,7 @@
 		<item value="531" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="678" key="DIALOG_HEIGHT"/>
-		<item value="318" key="DIALOG_X_ORIGIN"/>
+		<item value="297" key="DIALOG_X_ORIGIN"/>
 		<item value="48" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="NewClassWizardPage">
@@ -39,11 +39,18 @@
 		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
+	<section name="DialogBounds_OverrideMethodDialog">
+		<item value="539" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="467" key="DIALOG_HEIGHT"/>
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="189" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="540" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="696" key="DIALOG_HEIGHT"/>
-		<item value="471" key="DIALOG_X_ORIGIN"/>
+		<item value="288" key="DIALOG_X_ORIGIN"/>
 		<item value="102" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
@@ -69,6 +76,9 @@
 		<item value="false" key="FinalModifier"/>
 		<item value="10" key="LimitValue"/>
 	</section>
+	<section name="OverrideMethodDialog">
+		<item value="true" key="showtypes"/>
+	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
 	</section>
@@ -90,6 +100,9 @@
 			<list key="workingSets">
 			</list>
 		</section>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="3" key="pageIndex"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>
