@@ -1,4 +1,5 @@
 package jdbc.board.exam;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuUI {
@@ -53,14 +54,43 @@ public class MenuUI {
 		System.out.print("제목:");
 		String title = key.next();
 		//여기에서 BoardDAO의 메소드를 호출하세요
-		dao.search(title);
+		ArrayList<BoardDTO> boardlist = dao.findByTitle(title);
+		int size = boardlist.size();
+		for(int i=0;i<size;i++) {
+			BoardDTO board = boardlist.get(i);
+			System.out.println(board.getBoardNum()+"\t"+board.getId()
+						+"\t"+board.getTitle()+"\t"+board.getContent()
+						+"\t"+board.getWriteDate()+"\t"+board.getHit());
+		}
 	}
-	
-	
 	public void selectMenu(){
 		System.out.println("*******게시글조회********");
-		//여기에서 BoardDAO의 메소드를 호출하세요 - 전체사원조회
-		dao.select();
+		//여기에서 BoardDAO의 메소드를 호출하세요
+		ArrayList<BoardDTO> boardlist = dao.select();
+		int size = boardlist.size();
+		for(int i=0;i<size;i++) {
+			BoardDTO board = boardlist.get(i);
+			System.out.println(board.getBoardNum()+"\t"+board.getId()
+						+"\t"+board.getTitle()+"\t"+board.getContent()
+						+"\t"+board.getWriteDate()+"\t"+board.getHit());
+		}
+	}
+	public void readMenu() {
+		Scanner key =  new Scanner(System.in);
+		System.out.println("*******게시글 상세보기********");
+		System.out.print("게시글 번호:");
+		int boardnum = key.nextInt();
+		BoardDTO board = dao.read(boardnum);
+		if(board == null) {
+			System.out.println("조회된 데이터가 없습니다.");
+		}else {
+			System.out.println("글번호:"+board.getBoardNum());
+			System.out.println("게시자 ID:"+board.getId());
+			System.out.println("제목:"+board.getTitle());
+			System.out.println("내용:"+board.getContent());
+			System.out.println("게시일:"+board.getWriteDate());
+			System.out.println("조회수:"+board.getHit());
+		}
 	}
 }
 

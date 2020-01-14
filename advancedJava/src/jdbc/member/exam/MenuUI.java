@@ -1,4 +1,5 @@
 package jdbc.member.exam;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuUI {
@@ -59,10 +60,41 @@ public class MenuUI {
 		System.out.print("주소:");
 		String addr = key.next();
 		//여기에서 EmpDAO의 메소드를 호출하세요
+		System.out.println("ID\t이름\t부서번호\t주소");
+		//여기에서 EmpDAO의 메소드를 호출하세요 - 전체사원조회
+		ArrayList<MemberDTO> memberlist = dao.findByAddr(addr);
+		int size = memberlist.size();
+		for(int i=0;i<size;i++) {
+			MemberDTO member = memberlist.get(i);
+			System.out.println(member.getId()+"\t"+member.getName()+"\t"+member.getDeptno()+"\t"+member.getAddr());
+		}
 	}
 	public void selectMenu(){
 		System.out.println("*******사원조회********");
+		System.out.println("ID\t이름\t부서번호\t주소");
 		//여기에서 EmpDAO의 메소드를 호출하세요 - 전체사원조회
+		ArrayList<MemberDTO> memberlist = dao.memberList();
+		int size = memberlist.size();
+		for(int i=0;i<size;i++) {
+			MemberDTO member = memberlist.get(i);
+			System.out.println(member.getId()+"\t"+member.getName()+"\t"+member.getDeptno()+"\t"+member.getAddr());
+		}
+	}
+	public void loginMenu() {
+		Scanner key = new Scanner(System.in);
+		System.out.println("*******로그인********");
+		System.out.print("ID:");
+		String id = key.next();
+		System.out.print("Password:");
+		String pass = key.next();
+		MemberDTO member = dao.login(id, pass);
+		if(member == null) {
+			System.out.println("로그인 실패");
+		}else {
+			System.out.println("로그인 성공");
+			System.out.println(member.getName()+"님 환영합니다.");
+			//System.out.println(member.getId()+"\t"+member.getName()+"\t"+member.getDeptno()+"\t"+member.getAddr());
+		}
 	}
 }
 

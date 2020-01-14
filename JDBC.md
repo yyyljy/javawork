@@ -60,7 +60,7 @@
      - 보안에 취약 - SQLInjection에 취약
      - 쿼리를 읽고 분석 -> 컴파일 -> 실행 을 매번 반복해서 실행하고 작업
 
-   - PreparedStatement
+   - PreparedStatement (재사용 불가)
 
      - 동적 SQL을 실행
 

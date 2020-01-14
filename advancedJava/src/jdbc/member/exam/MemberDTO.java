@@ -41,10 +41,20 @@ public class MemberDTO {
 		super();
 		this.id = id;
 	}
+	//select
+	public MemberDTO(String id, String pass, String name, String addr, String deptno, Date hiredate, int point) {
+		super();
+		this.id = id;
+		this.pass = pass;
+		this.name = name;
+		this.addr = addr;
+		this.deptno = deptno;
+		this.hiredate = hiredate;
+		this.point = point;
+	}
 	public String getId() {
 		return id;
 	}
-	
 	public void setId(String id) {
 		this.id = id;
 	}
